@@ -1,5 +1,15 @@
 version: '3.8'
 services:
+
+services:
+  nextjs:
+    container_name: nextjs
+    build:
+      context: ./
+    image: nextjs
+    ports:
+      - '3000:3000'
+    
   postgres:
     image: 'postgres:17-alpine'
     environment:
